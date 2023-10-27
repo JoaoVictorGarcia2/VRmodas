@@ -1,0 +1,84 @@
+.topo {
+    width: 100%;
+    height: 80px;
+    background-color: #212529;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.topo_esquerda {
+    display: flex;
+    margin-left: 15px;
+}
+
+.topo_esquerda a {
+    text-decoration: none;
+    color: white;
+}
+
+.topo_esquerda input {
+    border-radius: 5px;
+    padding-left: 15px;
+    width: 200px;
+    margin-left: 25px;
+    margin-right: 8px;
+}
+
+.topo_esquerda button {
+    background-color: transparent;
+    border: 1px solid white;
+    width: 40px;
+    height: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.topo_esquerda button:hover {
+    background-color: #4b4b4b;
+}
+
+.topo_esquerda button img {
+    width: 65%;
+    height: 65%;
+}
+
+.topo_direita {
+    display: flex;
+    margin-right: 15px;
+}
+
+.topo_direita a img {
+    width: 60%;
+}
+
+#coracao {
+    margin-top: 3px;
+}
+
+#red {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    left: 93px;
+    top: 3px;
+    display: none;
+}
+
+.perfil {
+    border-radius: 100%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
