@@ -9,7 +9,8 @@ import Red from './img/coracao red.png';
 
 function Header() {
     return (
-        <header className="topo">       
+        <header className="topo">
+                   
             <div className='topo_esquerda'>
                 <a href='#'><h1>VRmodas</h1></a>
                 <input placeholder='O que você procura?'></input>
@@ -24,12 +25,6 @@ function Header() {
                 <div className='perfil'>
                     <img src={Perfil}></img>
                 </div>
-                {/* <details>
-                    <summary></summary>
-                    <p>Ver perfil</p>
-                    <p>Alterar senha</p>
-                    <p>Logout</p>
-                </details> */}
             </div>
         </header>
     )

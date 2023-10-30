@@ -70,8 +70,8 @@ function Produtos() {
                 <button>3</button>
                 <button className='arrows2'>&#62;&#62;</button>
             </div>
-
-            <div className='carrinho'>
+            <h1 className='titulo_carrinho'>Carrinho:</h1>
+            <div>
                 {carrinho.map(item => (
                     <Carrinho
                         key={item.produto.nome}

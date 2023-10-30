@@ -53,16 +53,28 @@
 .arrow1 {
   width: 100%;
   position: relative;
-  right: 610px;
-  bottom: 400px;
+  right: 540px;
+  bottom: 350px;
   cursor: pointer;
 }
 
 .arrow2 {
   width: 100%;
   position: relative;
-  left: 650px;
-  bottom: 400px;
+  left: 540px;
+  bottom: 350px;
   cursor: pointer;
+}
+
+.arrow1:hover {
+  background-color: gray ;
+  border-radius: 100%;
+  padding: 5px;
+}
+
+.arrow2:hover {
+  background-color: gray ;
+  border-radius: 100%;
+  padding: 5px;
 }
 

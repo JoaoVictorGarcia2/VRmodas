@@ -1,6 +1,5 @@
 .produtos {
     width: 89%;
-    height: 450px;
     margin-left: 150px;
 }
 
@@ -87,4 +86,8 @@
 .arrows2 {
     border-radius: 0px 5px 5px 0px;
     font-size: 9.5px;
+}
+
+.titulo_carrinho {
+    margin-bottom: 5px;
 }
