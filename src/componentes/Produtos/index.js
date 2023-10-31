@@ -7,9 +7,10 @@ import Sapato from './img/sapato.jpg';
 import Relogio from './img/relogio.jpg';
 
 function Produtos() {
-
+  
     const [carrinho, setCarrinho] = useState([]);
 
+    
     const produtos = [
         { nome: 'Terno social preto', imagem: Terno },
         { nome: 'Calça social masculina', imagem: Calca },
@@ -44,44 +45,53 @@ function Produtos() {
         setCarrinho(novoCarrinho);
       }
 
+      const calcularQuantidadeTotal = () => {
+        let total = 0;
+        carrinho.forEach(item => {
+            total += item.quantidade;
+        });
+        return total;
+      }
+
     return (
         <div className='produtos'>
-            <h1>Produtos</h1>
+          <h1>Produtos</h1>
 
-            <div className='loja'>
-                {produtos.map(produto => (
-                    <div className='card' key={produto.nome}>
-                        <div className='imagem'>
-                            <img src={produto.imagem} alt = {produto.nome}></img>
-                        </div>
-                        <div className='info'>   
-                            <p>{produto.nome}</p>
-                            <button onClick={() => adicionarAoCarrinho(produto)}>Adicionar ao carrinho!</button>
-                        </div>
-                    </div>
-                ))}
+          <div className='loja'>
+              {produtos.map(produto => (
+                  <div className='card' key={produto.nome}>
+                      <div className='imagem'>
+                          <img src={produto.imagem} alt = {produto.nome}></img>
+                      </div>
+                      <div className='info'>   
+                          <p>{produto.nome}</p>
+                          <button onClick={() => adicionarAoCarrinho(produto)}>Adicionar ao carrinho!</button>
+                      </div>
+                  </div>
+              ))}
 
-            </div>
+          </div>
 
-            <div className='botao_pagina'>
-                <button className='arrows1'>&#60;&#60;</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button className='arrows2'>&#62;&#62;</button>
-            </div>
-            <h1 className='titulo_carrinho'>Carrinho:</h1>
-            <div>
-                {carrinho.map(item => (
-                    <Carrinho
-                        key={item.produto.nome}
-                        produto={item.produto}
-                        quantidade={item.quantidade}
-                        aumentarQuantidade={() => aumentarQuantidade(item)}
-                        reduzirQuantidade={() => reduzirQuantidade(item)}
-                    />
-                ))}
-            </div>
+          <div className='botao_pagina'>
+              <button className='arrows1'>&#60;&#60;</button>
+              <button>1</button>
+              <button>2</button>
+              <button>3</button>
+              <button className='arrows2'>&#62;&#62;</button>
+          </div>
+          <h1 className='titulo_carrinho'>Carrinho:</h1>
+          <div className='carrinho_produtos'>
+              {carrinho.map(item => (
+                  <Carrinho
+                      key={item.produto.nome}
+                      produto={item.produto}
+                      quantidade={item.quantidade}
+                      aumentarQuantidade={() => aumentarQuantidade(item)}
+                      reduzirQuantidade={() => reduzirQuantidade(item)}
+                  />
+              ))}
+          </div>
+          <p className='quantidadetotal quantidade_carrinho'>{calcularQuantidadeTotal()}</p>
         </div>
     )
 }

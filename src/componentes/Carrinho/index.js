@@ -2,6 +2,7 @@ import './carrinho.css';
 import React from 'react';
 
 const Carrinho = ({ produto, quantidade, aumentarQuantidade, reduzirQuantidade }) => {
+  
   return (
       <div className='item-carrinho'>
         <div className='miniatura'>

@@ -28,11 +28,11 @@ function Cadastro() {
             alert('Cadastro realizado com sucesso');
             window.location.reload(); 
         } else if (!aceitoTermos) {
-            alert('Preencha todos os campos');
+            alert('Aceite os termos e condições');
         } else if (estadoSelecionado === 0) {
             alert('Escolha um estado'); 
         } else {
-            alert('Aceite os termos e condições');
+            alert('Preencha todos os campos');
         }
       };
       
@@ -54,7 +54,7 @@ function Cadastro() {
                         <label>E-mail</label>
                         <div className='campo'>
                             <button className='arroba'>@</button>
-                            <input type='email' ref={emailRef} />
+                            <input type='email' id='email' ref={emailRef} />
                         </div>
                     </div>
                 </div>

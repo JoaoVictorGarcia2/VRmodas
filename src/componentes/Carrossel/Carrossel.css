@@ -17,6 +17,7 @@
   display: flex;
   overflow-x: auto;
   scroll-behavior: smooth;
+  margin-top: 80px;
 }
 
 .container .carousel::-webkit-scrollbar {
